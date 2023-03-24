@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVDateCard"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="date"
+            android:textColor="@color/dark"
+            android:textAlignment="center"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTimeCard"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="hour"
+            android:textColor="@color/dark"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:layout_below="@id/idTVDateCard"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTempDescriptionCard"
+            android:layout_below="@id/idTVTimeCard"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text=""
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTemperatureCard"
+            android:gravity="center"
+            android:text="Temp"
+            android:textSize="36dp"
+            android:padding="5dp"
+            android:textColor="@color/dark"
+            android:textAlignment="center"
+            android:layout_below="@id/idTVTempDescriptionCard"/>
+
+        <ImageView
+            android:id="@+id/idIVConditionCard"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/idTVTemperatureCard"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/idIVConditionCard"
+            android:id="@+id/idTVPrecipCard"
+            android:textColor="@color/dark"
+            android:text="Precipation"
+            android:textSize="16dp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/idTVPrecipCard"
+            android:id="@+id/idTVCloudsCard"
+            android:textColor="@color/dark"
+            android:text="Clouds"
+            android:textSize="16dp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/idTVCloudsCard"
+            android:id="@+id/idTVPressureCard"
+            android:textColor="@color/dark"
+            android:text="Pressure"
+            android:textSize="16dp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_below="@id/idTVPressureCard"
+            android:id="@+id/idTVHumidityCard"
+            android:textColor="@color/dark"
+            android:text="Humidity"
+            android:textSize="16dp"
+            android:layout_margin="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVHumidityCard"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:id="@+id/idTVWindSpeedCard"
+                android:textColor="@color/dark"
+                android:text="Wind"
+                android:textSize="16dp"
+                android:layout_weight="7"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/idIVWindArrowCard"
+                android:layout_weight="2"
+                android:src="@drawable/ic_wind_arrow_dark"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

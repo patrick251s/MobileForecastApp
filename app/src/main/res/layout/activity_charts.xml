@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark"
+    tools:context=".ChartActivity">
+
+        <include
+            android:id="@+id/toolbarCharts"
+            layout="@layout/toolbar2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Temperature (°C) and precipation (mm)"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white">
+                </TextView>
+
+                <com.github.mikephil.charting.charts.CombinedChart
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:id="@+id/combinedChart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Overcast (%)"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp">
+                </TextView>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:id="@+id/cloudsChart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Wind speed (m/s)"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="5dp">
+                </TextView>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:id="@+id/windChart" />
+
+        </LinearLayout>
+
+</RelativeLayout>
